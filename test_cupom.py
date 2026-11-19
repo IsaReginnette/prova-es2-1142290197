@@ -17,3 +17,9 @@ def test_rejeita_percentual_zero():
     percentual = 0
     resultado = desconto_valido(percentual)
     assert resultado is False
+
+
+def test_rejeita_percentual_nao_inteiro():
+    percentual = 26.5
+    resultado = desconto_valido(percentual)
+    assert resultado is False
